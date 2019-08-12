@@ -52,7 +52,7 @@ def quick_sort(lista, inicial, final):
             pilha[topo] = final
 
 
-def desenhaGrafico(x, y,label, name, xl="Size", yl="Time"):
+def desenhaGrafico(x, y,label, name, xl="Entradas", yl="Saídas"):
 
     fig = plt.figure(figsize=(10, 8))
     ax = fig.add_subplot(111)
@@ -77,4 +77,4 @@ for i in range(len(tam)):
     print("executado o sort na lista de tamanho", tam[i])
 
 
-desenhaGrafico(tam, time,"Inverse list time", "time.png")
+desenhaGrafico(tam, time,"Melhor Tempo", "time.png")
