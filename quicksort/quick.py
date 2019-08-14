@@ -9,33 +9,33 @@ def listaInvertida(tam):
     lista = list(range(1, tam + 1))
     return lista[::-1]
 
-def part(lista,inicio,fim):
-    pivo = randint(inicio, fim)
+def part(tam,inicial,final):
+    pivo = randint(inicial, final)
 
-    lista[fim], lista[pivo] = lista[pivo], lista[fim]
+    tam[final], tam[pivo] = tam[pivo], tam[final]
 
-    pivo_index = inicio - 1
-    for index in range(inicio, fim):
-        if lista[index] < lista[fim]:
+    pivo_index = inicial - 1
+    for index in range(inicial, final):
+        if tam[index] < tam[final]:
             pivo_index = pivo_index + 1
-            lista[pivo_index], lista[index] = lista[index], lista[pivo_index]
+            tam[pivo_index], tam[index] = tam[index], tam[pivo_index]
 
-    temp = lista[pivo_index + 1]
-    lista[pivo_index + 1] = lista[fim]
-    lista[fim] = temp
+    temp = tam[pivo_index + 1]
+    tam[pivo_index + 1] = tam[final]
+    tam[final] = temp
 
     return pivo_index + 1
 
-def quick_sort(lista, inicio, fim):
-    if inicio < fim:
-        pivo = randint(inicio, fim)
-        temp = lista[fim]
-        lista[fim] = lista[pivo]
-        lista[pivo] = temp
+def quick_sort(tam, inicial, final):
+    if inicial < final:
+        pivo = randint(inicial, final)
+        temp = tam[final]
+        tam[final] = tam[pivo]
+        tam[pivo] = temp
 
-        p = part(lista, inicio, fim)
-        quick_sort(lista, inicio, p - 1)
-        quick_sort(lista, p + 1, fim)
+        p = part(tam, inicial, final)
+        quick_sort(tam, inicial, p - 1)
+        quick_sort(tam, p + 1, final)
 
 def desenhaGrafico(x, y,label, name, xl="Entradas", yl="Saídas"):
 
