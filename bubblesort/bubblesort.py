@@ -11,22 +11,19 @@ def geraLista(tam):
         if n not in lista: lista.append(n)
     return lista
 
-
 mpl.use('Agg')
 
-
 def bubble_sort(vetor):
-    count = 0
+    countAux = 0
     for j in range(len(vetor)):
         for i in range((len(vetor) - 1)):
             if vetor[i] > vetor[i + 1]:
-                count = count + 1
+                countAux = countAux + 1
                 aux=vetor[i]
                 vetor[i]=vetor[i+1]
                 vetor[i+1]=aux
 
-    return count
-
+    return countAux
 
 def desenhaGrafico(x, y, w, name , xl="Entradas", yl="Saídas" ) :
     fig = plt.figure(figsize=(10, 8))
@@ -36,8 +33,6 @@ def desenhaGrafico(x, y, w, name , xl="Entradas", yl="Saídas" ) :
     plt.ylabel(yl)
     plt.xlabel(xl)
     fig.savefig(name)
-
-
 
 tam = [10000, 20000, 50000, 100000]
 time = []
