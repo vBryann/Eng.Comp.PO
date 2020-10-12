@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 
 
 def geraLista(tam):
-    lista = []
+    list = []
     for i in range(tam):
         n = randint(1, 1 * tam)
-        if n not in lista: lista.append(n)
-    return lista
+        if n not in list: list.append(n)
+    return list
 
 mpl.use('Agg')
 
