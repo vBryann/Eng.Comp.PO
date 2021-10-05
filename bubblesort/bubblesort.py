@@ -34,7 +34,7 @@ def desenhaGrafico(x, y, w, name , xl="Entradas", yl="Saídas" ) :
     plt.xlabel(xl)
     fig.savefig(name)
 
-tam = [10000, 20000, 50000, 100000]
+tam = [5000, 10000, 25000, 50000]
 time = []
 count = []
 list = []
