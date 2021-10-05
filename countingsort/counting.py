@@ -27,7 +27,7 @@ def count_sort(tam):
             tam[x] = i
             x += 1
 
-def desenhaGrafico(x, y,label, name, xl="Tamanho da Lista", yl="Tempo"):
+def desenhaGrafico(x, y,label, name, xl="Array size", yl="Time"):
 
     fig = plt.figure(figsize=(10, 8))
     ax = fig.add_subplot(111)
