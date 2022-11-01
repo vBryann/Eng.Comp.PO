@@ -42,14 +42,14 @@ def desenhaGrafico(x, y,label, name, xl="Tamanho da Lista", yl="Tempo"):
 
 
 tam = [100000, 200000, 400000, 500000, 1000000, 2000000]
-time = []
+timeAll = []
 
 for i in range(len(tam)):
     lista = listaAleatoria(tam[i])
-    time.append(
+    timeAll.append(
         timeit.timeit("shell_sort({})".format(lista), setup="from __main__ import shell_sort", number=1))
 
     print("executado o sort na lista de tamanho", tam[i])
 
 
-desenhaGrafico(tam, time,"Lista aleatória", "tempo.png")
+desenhaGrafico(tam, timeAll,"Lista aleatória", "tempo.png")
